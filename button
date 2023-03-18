@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .like-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .like-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .like-count {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="like-container">
+    <button class="like-button">Like</button>
+    <span class="like-count">0</span>
+  </div>
+  <script>
+    const likeButton = document.querySelector('.like-button');
+    const likeCount = document.querySelector('.like-count');
+
+    let count = 0;
+
+    likeButton.addEventListener('click', () => {
+      count++;
+      likeCount.textContent = count;
+    });
+  </script>
+</body>
+</html>
